@@ -1,0 +1,76 @@
+generated: '2026-10-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 3
+  other_domain: 2
+  platform: 0
+  roles:
+  - api
+  - marketing
+  - other
+  - website
+hosts:
+- host: api.df.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: df.com
+  role: api
+  relation: other-domain
+- host: api.diamondfoundry.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: diamondfoundry.com
+  role: api
+  relation: own
+- host: diamondfoundry.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: diamondfoundry.com
+  role: website
+  relation: own
+- host: portal.diamondfoundry.com
+  found_by:
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types: []
+  serves:
+  - docs
+  registrable_domain: diamondfoundry.com
+  role: other
+  relation: own
+- host: www.df.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Newsroom
+  - AboutUs
+  - Blog
+  - PrivacyPolicy
+  - Contact
+  serves: []
+  registrable_domain: df.com
+  role: marketing
+  relation: other-domain

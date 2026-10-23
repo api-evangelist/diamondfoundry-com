@@ -1,25 +1,76 @@
 aid: diamondfoundry-com
+
 name: Diamond Foundry
-description: 'Diamond Foundry is a company surfaced via the API Evangelist harvest backlog (source: vc-portfolio;
-  backed by obvious-ventures) and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.prod.website-files.com/6a96e5c74cce21a226992e29/6ac00c59fff6a4c32add55dd_OpenGraph.jpg
+
+description: 'Diamond Foundry creates lab-grown diamonds using proprietary technology that produces high-quality single-crystal diamond wafers for industrial and consumer applications. The company focuses on sustainable manufacturing, reducing the environmental impact compared to traditional mining, and offers products for electronics, optics, and jewelry markets. Founded with backing from obvious-ventures, Diamond Foundry aims to shape the future of materials science through innovative diamond production.'
+
 url: https://raw.githubusercontent.com/api-evangelist/diamondfoundry-com/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:vc-portfolio
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-22'
+
 modified: '2026-10-22'
+
 tags:
 - Company
-apis: []
+- Diamond
+- Manufacturing
+- Materials
+- Technology
+- Sustainable
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-x-backed-by:
-- obvious-ventures
+
 common:
+- type: Hosts
+  url: hosts/diamondfoundry-com-hosts.yml
+- type: Vendors
+  url: vendors/diamondfoundry-com-vendors.yml
+- type: Newsroom
+  url: https://www.df.com/insights-categories/media
+- type: DomainSecurity
+  url: security/diamondfoundry-com-domain-security.yml
 - type: Website
   url: https://diamondfoundry.com
+- type: AboutUs
+  url: https://www.df.com/about-us
+- type: Blog
+  url: https://www.df.com/insights
+- type: PrivacyPolicy
+  url: https://www.df.com/privacy-policy
+- type: Contact
+  url: https://www.df.com/contact
+
+apis: []
+
+x-backed-by:
+- obvious-ventures
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  detail: The provider's website and docs are HTML pages without any published OpenAPI, GraphQL, AsyncAPI, gRPC, or WSDL specifications.
+  evidence:
+    - url: https://www.df.com
+      status: 200
+  checked: '2026-10-23'
+x-enrichment:
+  date: '2026-10-23'
+  status: enriched
+  artifacts_added: 8
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
